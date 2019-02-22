@@ -10,9 +10,7 @@ function parseQuery(queryString) {
 
 // Write Cookie
 function createCookie(name, value, days) {
-
   if (value) {
-
     if (days) {
       var date = new Date();
       date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -21,21 +19,16 @@ function createCookie(name, value, days) {
       var expires = "";
     }
     document.cookie = name + "=" + value + expires + "; path=/";
-    
   }
-
   if (!readCookie(name)) {
     createCookie(name, 'na', days);
   }
-
 }
 
 // Read Cookie
 function readCookie(name) {
-
   var nameEQ = name + "=";
   var ca = document.cookie.split(';');
-
   for (var i = 0; i < ca.length; i++) {
     var c = ca[i];
     while (c.charAt(0) == ' ') {
@@ -50,14 +43,11 @@ function readCookie(name) {
 
 // Days Array
 function daysF() {
-  
   var daysConfig = {
     'admitad': 90
   };
-
   days = daysConfig[source];
   if (!!!days) days = 30;
-
   return days;
 }
 
@@ -105,7 +95,6 @@ function createCookie(name, value, days) {
 function readCookie(name) {
   var nameEQ = name + "=";
   var ca = document.cookie.split(';');
-
   for (var i = 0; i < ca.length; i++) {
     var c = ca[i];
     while (c.charAt(0) == ' ') {
@@ -120,11 +109,9 @@ function readCookie(name) {
   
 //CookieDaysParams
 function daysF() {
-  
   var daysConfig = {
     'admitad': 90
   };
-
   days = daysConfig[source];
   if (!!!days) days = 30;
   return days;
